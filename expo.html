@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+
+
+
+
+    <title>CodePen - CSS Animation Effects</title>
+
+    <link rel="canonical" href="https://codepen.io/faridvatani/pen/rNqOjZW">
+
+
+
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            height: 1200px;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+
+        }
+
+
+
+        .container .box {
+
+            position: relative;
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(
+                    45deg,
+                    #007205 10%,
+                    transparent 10%,
+                    transparent 50%,
+                    #007205 50%,
+                    #007205 60%,
+                    transparent 60%,
+                    transparent 100%
+            );
+
+            background-size: 33px 33px;
+            transform: rotate(calc(var(--i) * 90deg));
+            animation: animate 55.5s linear infinite;
+            /*animation-iteration-count: infinite;*/
+            /*animation-delay: 2s;*/
+
+
+        }
+
+
+
+
+
+         .cc5
+        {
+            position: absolute;
+            background: url("https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg")no-repeat ;
+             background-color: rgba(0, 162, 0, 0.5);
+             /*background-size: 50%;*/
+
+             background-blend-mode: multiply;
+            align-content: center;
+             align-items: center;
+
+            opacity: 0.5;
+            width: 736px;
+            height: 736px;
+            top: 50%;
+             cursor: grab;
+
+
+        }
+
+
+
+        @keyframes animate {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: 400px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container .box {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container .box {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+
+
+
+
+        .trns-text {
+            background: url(https://media.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif)   -20px -20px no-repeat;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            /* Below is not needed */
+            display:inline-block;
+            flex-direction: row;
+            position: absolute;
+            font-size: 25px;
+            font-family: arial;
+            text-align: center;
+            justify-content: center;
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: -5px;
+            top:10% ;
+            /*right: 50%;*/
+            background-size: 10%;
+            background-repeat: repeat;
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+
+
+
+</head>
+
+
+
+
+
+
+<div class="container">
+    <div class="box" style="--i:1;"></div>
+    <div class="box" style="--i:2;"></div>
+</div>
+
+
+
+
+
+<div class="trns-text">
+    <h1><span>print(" Oops! There might be some technical issue here ! ")</span></h1>
+
+</div>
+
+
+<div class="cc5" > c23333333  </div>
+
+
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/DrawSVGPlugin3.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/MotionPathPlugin.min.js'></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+
+</body>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

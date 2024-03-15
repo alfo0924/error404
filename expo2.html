@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@800;900&display=swap" rel="stylesheet">
+
+
+
+
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+
+    <title>Ctt001</title>
+
+
+
+
+
+
+    <style>
+        body,
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            height: 800vh;
+            background: #a2a2a2;
+        }
+
+        .container {
+            position: relative;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .scrolling-text {
+            /* display: inline-block; */
+            background: rgb(132, 132, 132);
+            transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+            will-change: transform;
+
+            backface-visibility: hidden;
+            padding: 20px ;
+        }
+
+        .scrolling-text .scrolling-text-content {
+            background: url(https://media.giphy.com/media/mTgj4zdM2vPLxp9p2U/giphy.gif);
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 120px;
+            white-space: nowrap;
+            transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+            line-height: 1em;
+            margin: 50px 0;
+
+
+            font-family: 'Noto Sans TC', sans-serif;
+
+
+        }
+        section
+        {
+            color: aliceblue;
+
+        }
+
+
+
+
+
+
+        .scrolling-text2 {
+            /* display: inline-block; */
+            background: rgb(0, 0, 0);
+            transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+            will-change: transform;
+            padding: 20px;
+            backface-visibility: hidden;
+        }
+
+        .scrolling-text2 .scrolling-text2-content2 {
+            background: url(https://media.giphy.com/media/mTgj4zdM2vPLxp9p2U/giphy.gif);
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+
+            text-transform: uppercase;
+            color: #ffffff;
+            font-size: 120px;
+            white-space: nowrap;
+            transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+            line-height: 1em;
+            margin: 50px 0;
+
+
+
+            font-family: 'Noto Sans TC', sans-serif;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body translate="no">
+<div class="container" speed=500>
+    <div class='scrolling-text'>
+        <h2 class="scrolling-text-content">JAVA BEVERAGE IN THE HOUSE 222  </h2>
+    </div>
+</div>
+
+<br>
+
+<body translate="no">
+<div class="container" speed=500>
+    <div class='scrolling-text2'>
+        <h2 class="scrolling-text2-content2">   JAVA BEVERAGE IS IN THE HOUSE   </h2>
+    </div>
+</div>
+
+
+<br>
+<div class="container left-to-right" speed=500>
+    <div class='scrolling-text'>
+        <h2 class="scrolling-text-content">SYStem.out.println("Hello  from Java  !") </h2>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="container">
+    <div class='scrolling-text'>
+        <h2 class="scrolling-text-content">OUT.PRINTLN{JAVA爪蛙}
+        </h2>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<section>
+    <p> Hello front-end </p>
+</section>
+
+
+
+
+
+
+
+<!-- function below -->
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script id="rendered-js" >
+
+
+
+
+
+    $(document).ready(function () {
+        var containers = $('.container');
+
+        if (containers.length) {
+            containers.each(function () {
+                var container = $(this);
+
+                // Support small text - copy to fill screen width
+                if (container.find('.scrolling-text').outerWidth() < $(window).width()) {
+                    var windowToScrolltextRatio = Math.round($(window).width() / container.find('.scrolling-text').outerWidth()),
+                        scrollTextContent = container.find('.scrolling-text .scrolling-text-content').text(),
+                        newScrollText = '';
+                    for (var i = 0; i < windowToScrolltextRatio; i++) {if (window.CP.shouldStopExecution(0)) break;
+                        newScrollText += ' ' + scrollTextContent;
+                    }window.CP.exitedLoop(0);
+                    container.find('.scrolling-text .scrolling-text-content').text(newScrollText);
+                }
+
+                // Init variables and config
+                var scrollingText = container.find('.scrolling-text'),
+                    scrollingTextWidth = scrollingText.outerWidth(),
+                    scrollingTextHeight = scrollingText.outerHeight(true),
+                    startLetterIndent = parseInt(scrollingText.find('.scrolling-text-content').css('font-size'), 10) / 4.8,
+                    startLetterIndent = Math.round(startLetterIndent),
+                    scrollAmountBoundary = Math.abs($(window).width() - scrollingTextWidth),
+                    transformAmount = 0,
+                    leftBound = 0,
+                    rightBound = scrollAmountBoundary,
+                    transformDirection = container.hasClass('left-to-right') ? -1 : 1,
+                    transformSpeed = 100;
+
+
+
+
+
+                // Read transform speed
+                if (container.attr('speed')) {
+                    transformSpeed = container.attr('speed');
+                }
+
+                // Make scrolling text copy for scrolling infinity
+                container.append(scrollingText.clone().addClass('scrolling-text-copy'));
+                container.find('.scrolling-text').css({ 'position': 'absolute', 'left': 0 });
+                container.css('height', scrollingTextHeight);
+
+                var getActiveScrollingText = function (direction) {
+                    var firstScrollingText = container.find('.scrolling-text:nth-child(1)');
+                    var secondScrollingText = container.find('.scrolling-text:nth-child(2)');
+
+                    var firstScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(1)').css("left"), 10);
+                    var secondScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(2)').css("left"), 10);
+
+                    if (direction === 'left') {
+                        return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                    } else if (direction === 'right') {
+                        return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                    }
+                };
+
+
+
+
+                $(window).on('wheel', function (e) {
+                    var delta = e.originalEvent.deltaY;
+
+                    if (delta > 0) {
+                        // going down
+                        transformAmount += transformSpeed * transformDirection;
+                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');
+                    } else
+                    {
+                        transformAmount -= transformSpeed * transformDirection;
+                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(-10deg)');
+                    }
+                    setTimeout(function () {
+                        container.find('.scrolling-text').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');
+                    }, 10);
+                    setTimeout(function () {
+                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');
+                    }, 500);
+
+
+
+
+
+                    // Boundaries
+                    if (transformAmount < leftBound) {
+                        var activeText = getActiveScrollingText('left');
+                        activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });
+                        leftBound = parseInt(activeText.css("left"), 10);
+                        rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
+
+                    } else if (transformAmount > rightBound) {
+                        var activeText = getActiveScrollingText('right');
+                        activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });
+                        rightBound += scrollingTextWidth + startLetterIndent;
+                        leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
+                    }
+                });
+            });
+        }
+    });
+
+</script>
+
+
+
+
+
+
+
+
+<script id="rendered-js" >
+
+
+
+
+
+    $(document).ready(function () {
+        var containers = $('.container');
+
+        if (containers.length) {
+            containers.each(function () {
+                var container = $(this);
+
+                // Support small text - copy to fill screen width
+                if (container.find('.scrolling-text2').outerWidth() < $(window).width()) {
+                    var windowToScrolltextRatio = Math.round($(window).width() / container.find('.scrolling-text2').outerWidth()),
+                        scrollTextContent = container.find('.scrolling-text2 .scrolling-text2-content2').text(),
+                        newScrollText = '';
+                    for (var i = 0; i < windowToScrolltextRatio; i++) {if (window.CP.shouldStopExecution(0)) break;
+                        newScrollText += ' ' + scrollTextContent;
+                    }window.CP.exitedLoop(0);
+                    container.find('.scrolling-text2 .scrolling-text2-content2').text(newScrollText);
+                }
+
+                // Init variables and config
+                var scrollingText = container.find('.scrolling-text2'),
+                    scrollingTextWidth = scrollingText.outerWidth(),
+                    scrollingTextHeight = scrollingText.outerHeight(true),
+                    startLetterIndent = parseInt(scrollingText.find('.scrolling-text2-content2').css('font-size'), 10) / 4.8,
+                    startLetterIndent = Math.round(startLetterIndent),
+                    scrollAmountBoundary = Math.abs($(window).width() - scrollingTextWidth),
+                    transformAmount = 0,
+                    leftBound = 0,
+                    rightBound = scrollAmountBoundary,
+                    transformDirection = container.hasClass('left-to-right') ? -1 : 1,
+                    transformSpeed = 100;
+
+
+
+
+
+                // Read transform speed
+                if (container.attr('speed')) {
+                    transformSpeed = container.attr('speed');
+                }
+
+                // Make scrolling text copy for scrolling infinity
+                container.append(scrollingText.clone().addClass('scrolling-text2-copy'));
+                container.find('.scrolling-text2').css({ 'position': 'absolute', 'left': 0 });
+                container.css('height', scrollingTextHeight);
+
+                var getActiveScrollingText = function (direction) {
+                    var firstScrollingText = container.find('.scrolling-text2:nth-child(1)');
+                    var secondScrollingText = container.find('.scrolling-text2:nth-child(2)');
+
+                    var firstScrollingTextLeft = parseInt(container.find('.scrolling-text2:nth-child(1)').css("left"), 10);
+                    var secondScrollingTextLeft = parseInt(container.find('.scrolling-text2:nth-child(2)').css("left"), 10);
+
+                    if (direction === 'left') {
+                        return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                    } else if (direction === 'right') {
+                        return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;
+                    }
+                };
+
+
+
+
+                $(window).on('wheel', function (e) {
+                    var delta = e.originalEvent.deltaY;
+
+                    if (delta > 0) {
+                        // going down
+                        transformAmount += transformSpeed * transformDirection;
+                        container.find('.scrolling-text2 .scrolling-text2-content2').css('transform', 'skewX(10deg)');
+                    } else
+                    {
+                        transformAmount -= transformSpeed * transformDirection;
+                        container.find('.scrolling-text2 .scrolling-text2-content').css('transform', 'skewX(-10deg)');
+                    }
+                    setTimeout(function () {
+                        container.find('.scrolling-text2').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');
+                    }, 10);
+                    setTimeout(function () {
+                        container.find('.scrolling-text2 .scrolling-text2-content2').css('transform', 'skewX(0)');
+                    }, 500);
+
+
+
+
+
+                    // Boundaries
+                    if (transformAmount < leftBound) {
+                        var activeText = getActiveScrollingText('left');
+                        activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });
+                        leftBound = parseInt(activeText.css("left"), 10);
+                        rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;
+
+                    } else if (transformAmount > rightBound) {
+                        var activeText = getActiveScrollingText('right');
+                        activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });
+                        rightBound += scrollingTextWidth + startLetterIndent;
+                        leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;
+                    }
+                });
+            });
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+</body>
+
+</html>

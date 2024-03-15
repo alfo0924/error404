@@ -8,6 +8,11 @@
     <title>Error404 </title>
 
 
+
+
+
+
+
 </head>
 <body>
 
@@ -19,12 +24,16 @@
     background: darkgray;
         color:rgba(15 ,81, 215, 0.7);
         font-size: 2rem ;
-        border: 4px solid rgba(35,66,99,0.8);
-        /*padding: 10%;*/
-        margin: 10%;
+        /*border: 4px solid rgba(35,66,99,0.8);*/
+        padding: 20px;
+        /*margin: 30%;*/
         text-align: center;
         position: relative;
-        /*display: flex;*/
+        height: 2000px;
+        display: flex;
+
+        align-content: center;
+
     }
  body h1
  {
@@ -44,8 +53,39 @@
     }
 
 
+    timer
+    {
+        padding: 50px;
+        /*margin-top: 50px;*/
+        /*margin: 50px;*/
+    }
+
+
+
+
+
+
+
+    /*footer*/
+    /*{*/
+    /*    border: darkblue;*/
+    /*    background-color: darkgray;*/
+    /*    font-size: 55px;*/
+    /*    position: absolute;*/
+    /*    width: 100%;*/
+    /*    text-align: center;*/
+
+    /*}*/
+
+
 
 </style>
+
+
+
+<div id="timer">Redirecting in <span id="countdown"></span> seconds...</div>
+
+
 
 <h1>
     Test12 12
@@ -58,6 +98,26 @@
 
 
 
+<script>
+    // Set the countdown duration in seconds
+    var countdownDuration = 20;
+
+    // Function to update countdown
+    function updateCountdown() {
+        var countdownElement = document.getElementById("countdown");
+        countdownElement.textContent = countdownDuration;
+        countdownDuration--;
+        if (countdownDuration < 0) {
+            // Redirect after countdown ends
+            window.location.replace("https://www.youtube.com/?gl=TW&hl=zh-tw"); // Replace URL with your desired destination
+        } else {
+            setTimeout(updateCountdown, 1000);
+        }
+    }
+
+    // Start the countdown
+    updateCountdown();
+</script>
 
 
 
@@ -66,5 +126,17 @@
 
 
 
+
+
+<footer>
+
+
+
+    <h1>C3 test</h1>
+
+
+
+</footer>
 </body>
+
 </html>
