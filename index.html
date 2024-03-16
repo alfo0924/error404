@@ -8,9 +8,13 @@
     <title>Error404 </title>
 
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Honk&display=swap" rel="stylesheet">
 
 
 </head>
@@ -21,8 +25,14 @@
 
     body
     {
-    background: darkgray;
-        color:rgba(15 ,81, 215, 0.7);
+
+
+        background: url("https://harpersbazaar.com.au/wp-content/uploads/2022/07/AAAAQRRstNIviuDrod6HjvBuuSTfb7LIU16cOr2cPCBZ0Qyw5Awhs_XnTB-ZCVD6b2UYwaM7enQzsr29rMee5kVLIE0wrkZDluiuqvPFlPia2ribROlZmbJE8YtDsT1NySkW8SMIJIw0Wxy-c4EJ7gVtocN_-1024x683.jpeg");
+        background-size: 100%;
+        /*background-color: red;*/
+        background-color: rgba(84, 9, 103, 0.69);
+        background-blend-mode: multiply;
+        color: rgba(201, 161, 0, 0.7);
         font-size: 2rem ;
         /*border: 4px solid rgba(35,66,99,0.8);*/
         padding: 20px;
@@ -32,35 +42,52 @@
         height: 2000px;
         /*display: flex;*/
 
+        font-family: "Creepster", system-ui;
+        font-weight: 400;
+        font-style: normal;
+
+
         align-content: center;
 
     }
  body h1
  {
-     border:5px solid rgba(33,29,100,0.8) ;
+     border:5px solid rgba(88, 80, 238, 0.65);
      /*width:100% ;*/
      /*display: inline-block;*/
      /*   position: absolute;*/
-     background: darkblue;
+     background: rgba(0, 0, 255, 0.64);
      overflow: hidden;
 
  }
     body h2
     {
-        border:5px solid rgba(0, 255, 16, 0.8);
+        border:5px solid rgba(201, 161, 0, 0.7);
 
 
     }
 
 
-    timer
+    #timer
     {
+        font-size: 20px;
         padding: 50px;
         /*margin-top: 50px;*/
         /*margin: 50px;*/
+        font-family: "Creepster", system-ui;
+        font-weight: 400;
+        font-style: normal;
+
     }
 
 
+    #giff
+    {
+        background: url("https://media.giphy.com/media/LTo91upGXovaE/giphy.gif?cid=ecf05e479fftv85zm8ihunji6fbv11sqp7zkmu8qqkgr502k&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+        background-size: 100%;
+        height: 300px;
+        width: 500px;
+    }
 
 
 
@@ -83,7 +110,11 @@
 
 
 
-<div id="timer">Redirecting in <span id="countdown"></span> seconds...</div>
+
+<div id="giff" ></div>
+
+
+<div id="timer">Redirecting in <span id="countdown"></span> seconds...toGetBackInTime</div>
 
 
 
@@ -109,7 +140,7 @@
         countdownDuration--;
         if (countdownDuration < 0) {
             // Redirect after countdown ends
-            window.location.replace("https://www.youtube.com/watch?v=iWa-6g-TbgI"); // Replace URL with your desired destination
+            window.location.replace("https://www.youtube.com/watch?v=4keLK_l26b8"); // Replace URL with your desired destination
         } else {
             setTimeout(updateCountdown, 1000);
         }
