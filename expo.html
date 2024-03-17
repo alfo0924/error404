@@ -150,7 +150,13 @@
 
 
         }
-
+        #counter
+        {
+            position: absolute;
+            display: flex;
+            top: 20%;
+            color: #00ef0f;
+        }
 
 
 
@@ -180,14 +186,16 @@
     <div class="box" style="--i:2;"></div>
 </div>
 
-
-
-
+<div id="counter" >
+<div id="timer">Redirecting in <span id="countdown"></span> seconds...toGetBackToGitHub</div>
+</div>
 
 <div class="trns-text">
     <h1><span>print(" Oops! There might be some technical issue here ! ")</span></h1>
 
 </div>
+
+
 
 
 <div class="cc5" > c23333333  </div>
@@ -202,6 +210,38 @@
 
 <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
 
+
+
+
+
+<script>
+    // Set the countdown duration in seconds
+    var countdownDuration = 10;
+
+    // Function to update countdown
+    function updateCountdown() {
+        var countdownElement = document.getElementById("countdown");
+        countdownElement.textContent = countdownDuration;
+        countdownDuration--;
+        if (countdownDuration < 0) {
+            // Redirect after countdown ends
+            window.location.replace("https://www.youtube.com/"); // Replace URL with your desired destination
+        } else {
+            setTimeout(updateCountdown, 1000);
+        }
+    }
+
+
+
+    // Start the countdown
+    updateCountdown();
+</script>
+
+
+
+
+
+
 </body>
 
 
@@ -211,6 +251,6 @@
 
 
 
-</body>
+
 
 </html>
