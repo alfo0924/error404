@@ -10,13 +10,22 @@
     <meta name="apple-mobile-web-app-title" content="CodePen">
 
 
+    <link rel="alternate icon" class="js-site-favicon" type="image/png" href="https://github.githubassets.com/favicons/favicon.png">
 
 
 
-    <title>CodePen - CSS Animation Effects</title>
+
+
+
+
+    <title>GithubError404</title>
 
     <link rel="canonical" href="https://codepen.io/faridvatani/pen/rNqOjZW">
 
+
+
+    <!-- CDN input-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 
 
@@ -37,12 +46,18 @@
         }
 
         .container {
-            position: relative;
+            /*position: relative;*/
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
             -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+
+            position: absolute;
+            /*width: 100vw;*/
+            overflow: hidden;
+            background-color: #000000;
+
 
         }
 
@@ -168,6 +183,128 @@
 
 
 
+
+
+
+
+        /*!*.container2 {*!*/
+        /*!*    position: absolute;*!*/
+        /*!*    width: 100vw;*!*/
+        /*!*    overflow: hidden;*!*/
+        /*!*    background-color: #000000;*!*/
+        /*!*}*!*/
+
+        /*.scrolling-text*/
+        /*{*/
+        /*    !*position: absolute;*!*/
+        /*    !* display: inline-block; *!*/
+        /*    background: rgb(0, 0, 0);*/
+        /*    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);*/
+        /*    will-change: transform;*/
+
+        /*    backface-visibility: hidden;*/
+        /*    padding: 20px ;*/
+        /*}*/
+
+        /*.scrolling-text .scrolling-text-content*/
+        /*{*/
+        /*    !*position: absolute;*!*/
+        /*    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHhteG9oOGViYWVkNXhjZXBxMHMwcDd3bGx6b25ma2QyOHB1bmFqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osxYsSSxjWhZw0BUY/giphy.gif);*/
+        /*    background-size: 5%;*/
+        /*    !* background-color: rgb(38, 72, 0);*/
+        /*    background-blend-mode:darken; *!*/
+
+        /*    text-fill-color: transparent;*/
+        /*    -webkit-text-fill-color: transparent;*/
+        /*    background-clip: text;*/
+
+        /*    text-transform: uppercase;*/
+        /*    color: #fff;*/
+        /*    font-size: 80px;*/
+        /*    white-space: nowrap;*/
+        /*    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);*/
+        /*    line-height: 1em;*/
+        /*    margin: 50px 0;*/
+
+        /*    font-family: "Libre Barcode 39 Text", system-ui;*/
+        /*    font-weight: 500;*/
+        /*    font-style: normal;*/
+
+        /*}*/
+        /*section*/
+        /*{*/
+        /*    color: aliceblue;*/
+
+        /*}*/
+
+
+
+
+
+
+        /*.scrolling-text2*/
+        /*{*/
+        /*    !*position: absolute;*!*/
+        /*    !* display: inline-block; *!*/
+        /*    background: rgb(0, 0, 0);*/
+        /*    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);*/
+        /*    will-change: transform;*/
+        /*    padding: 20px;*/
+        /*    backface-visibility: hidden;*/
+        /*}*/
+
+        /*.scrolling-text2 .scrolling-text2-content2*/
+        /*{*/
+        /*    !*position: absolute;*!*/
+        /*    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHI5OG9teW0zdGpkbWtza2NqMjM0a3YzaGFsamJ0YTUxaXB1andtdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/quEsMOrr3hmQ8/giphy.gif);*/
+        /*    background-size: 5%;*/
+
+        /*    text-fill-color: transparent;*/
+        /*    -webkit-text-fill-color: transparent;*/
+        /*    background-clip: text;*/
+
+        /*    text-transform: uppercase;*/
+        /*    color: #ffffff;*/
+        /*    font-size: 100px;*/
+        /*    white-space: nowrap;*/
+        /*    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);*/
+        /*    line-height: 1em;*/
+        /*    margin: 50px 0;*/
+
+
+
+        /*    font-family: "Rubik Broken Fax", system-ui;*/
+        /*    font-weight: 400;*/
+        /*    font-style: normal;*/
+
+
+        /*}*/
+
+
+
+
+
+
+    footer
+    {
+        background: rgba(12, 12, 12, 0.75);
+        padding: 30px;
+        /*position: absolute;*/
+        color:chartreuse;
+        bottom:0;
+        width: 100vh;
+        position: sticky;
+        top: 100vh;
+
+
+    }
+
+
+
+
+
+
+
     </style>
 
     <script>
@@ -177,6 +314,85 @@
 
 
 </head>
+
+
+<body>
+
+
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="https://github.com/">         <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+            <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
+        </svg></a>
+
+
+
+
+
+
+
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Github</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://github.com/login">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home">Sign up</a>
+                    </li>
+
+
+
+
+
+
+
+
+<!--                    <li class="nav-item dropdown">-->
+<!--                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                            Dropdown-->
+<!--                        </a>-->
+<!--                        <ul class="dropdown-menu dropdown-menu-dark">-->
+<!--                            <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                            <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                            <li>-->
+<!--                                <hr class="dropdown-divider">-->
+<!--                            </li>-->
+<!--                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
+
+
+
+
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,7 +416,47 @@
 
 
 
-<div class="cc5" > c23333333  </div>
+
+
+
+<div class="cc5" >  </div>
+
+<!-- Github graph -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container" speed=500>-->
+<!--    <div class='scrolling-text2'>-->
+<!--        <h2 class="scrolling-text2-content2">   Error404 Pages will be re-direct soon !   </h2>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+
+<!--<br>-->
+<!--<div class="container left-to-right" speed=500>-->
+<!--    <div class='scrolling-text'>-->
+<!--        <h2 class="scrolling-text-content">SYStem.out.println("Page will be re-direct soon !") </h2>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+
+
 
 
 <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js'></script>
@@ -218,7 +474,7 @@
 
 <script>
     // Set the countdown duration in seconds
-    var countdownDuration = 10;
+    var countdownDuration = 60;
 
     // Function to update countdown
     function updateCountdown() {
@@ -227,7 +483,7 @@
         countdownDuration--;
         if (countdownDuration < 0) {
             // Redirect after countdown ends
-            window.location.replace("https://www.youtube.com/"); // Replace URL with your desired destination
+            window.location.replace("https://github.com/"); // Replace URL with your desired destination
         } else {
             setTimeout(updateCountdown, 1000);
         }
@@ -239,6 +495,251 @@
     updateCountdown();
 </script>
 
+
+
+
+
+<!--&lt;!&ndash; function below &ndash;&gt;-->
+
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>-->
+<!--<script id="rendered-js" >-->
+
+
+
+
+
+<!--    $(document).ready(function () {-->
+<!--        var containers = $('.container');-->
+
+<!--        if (containers.length) {-->
+<!--            containers.each(function () {-->
+<!--                var container = $(this);-->
+
+<!--                // Support small text - copy to fill screen width-->
+<!--                if (container.find('.scrolling-text').outerWidth() < $(window).width()) {-->
+<!--                    var windowToScrolltextRatio = Math.round($(window).width() / container.find('.scrolling-text').outerWidth()),-->
+<!--                        scrollTextContent = container.find('.scrolling-text .scrolling-text-content').text(),-->
+<!--                        newScrollText = '';-->
+<!--                    for (var i = 0; i < windowToScrolltextRatio; i++) {if (window.CP.shouldStopExecution(0)) break;-->
+<!--                        newScrollText += ' ' + scrollTextContent;-->
+<!--                    }window.CP.exitedLoop(0);-->
+<!--                    container.find('.scrolling-text .scrolling-text-content').text(newScrollText);-->
+<!--                }-->
+
+<!--                // Init variables and config-->
+<!--                var scrollingText = container.find('.scrolling-text'),-->
+<!--                    scrollingTextWidth = scrollingText.outerWidth(),-->
+<!--                    scrollingTextHeight = scrollingText.outerHeight(true),-->
+<!--                    startLetterIndent = parseInt(scrollingText.find('.scrolling-text-content').css('font-size'), 10) / 4.8,-->
+<!--                    startLetterIndent = Math.round(startLetterIndent),-->
+<!--                    scrollAmountBoundary = Math.abs($(window).width() - scrollingTextWidth),-->
+<!--                    transformAmount = 0,-->
+<!--                    leftBound = 0,-->
+<!--                    rightBound = scrollAmountBoundary,-->
+<!--                    transformDirection = container.hasClass('left-to-right') ? -1 : 1,-->
+<!--                    transformSpeed = 100;-->
+
+
+
+
+
+<!--                // Read transform speed-->
+<!--                if (container.attr('speed')) {-->
+<!--                    transformSpeed = container.attr('speed');-->
+<!--                }-->
+
+<!--                // Make scrolling text copy for scrolling infinity-->
+<!--                container.append(scrollingText.clone().addClass('scrolling-text-copy'));-->
+<!--                container.find('.scrolling-text').css({ 'position': 'absolute', 'left': 0 });-->
+<!--                container.css('height', scrollingTextHeight);-->
+
+<!--                var getActiveScrollingText = function (direction) {-->
+<!--                    var firstScrollingText = container.find('.scrolling-text:nth-child(1)');-->
+<!--                    var secondScrollingText = container.find('.scrolling-text:nth-child(2)');-->
+
+<!--                    var firstScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(1)').css("left"), 10);-->
+<!--                    var secondScrollingTextLeft = parseInt(container.find('.scrolling-text:nth-child(2)').css("left"), 10);-->
+
+<!--                    if (direction === 'left') {-->
+<!--                        return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;-->
+<!--                    } else if (direction === 'right') {-->
+<!--                        return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;-->
+<!--                    }-->
+<!--                };-->
+
+
+
+
+<!--                $(window).on('wheel', function (e) {-->
+<!--                    var delta = e.originalEvent.deltaY;-->
+
+<!--                    if (delta > 0) {-->
+<!--                        // going down-->
+<!--                        transformAmount += transformSpeed * transformDirection;-->
+<!--                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(10deg)');-->
+<!--                    } else-->
+<!--                    {-->
+<!--                        transformAmount -= transformSpeed * transformDirection;-->
+<!--                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(-10deg)');-->
+<!--                    }-->
+<!--                    setTimeout(function () {-->
+<!--                        container.find('.scrolling-text').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');-->
+<!--                    }, 10);-->
+<!--                    setTimeout(function () {-->
+<!--                        container.find('.scrolling-text .scrolling-text-content').css('transform', 'skewX(0)');-->
+<!--                    }, 500);-->
+
+
+
+
+
+<!--                    // Boundaries-->
+<!--                    if (transformAmount < leftBound) {-->
+<!--                        var activeText = getActiveScrollingText('left');-->
+<!--                        activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });-->
+<!--                        leftBound = parseInt(activeText.css("left"), 10);-->
+<!--                        rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;-->
+
+<!--                    } else if (transformAmount > rightBound) {-->
+<!--                        var activeText = getActiveScrollingText('right');-->
+<!--                        activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });-->
+<!--                        rightBound += scrollingTextWidth + startLetterIndent;-->
+<!--                        leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+<!--        }-->
+<!--    });-->
+
+
+
+
+
+
+<!--    $(document).ready(function () {-->
+<!--        var containers = $('.container');-->
+
+<!--        if (containers.length) {-->
+<!--            containers.each(function () {-->
+<!--                var container = $(this);-->
+
+<!--                // Support small text - copy to fill screen width-->
+<!--                if (container.find('.scrolling-text2').outerWidth() < $(window).width()) {-->
+<!--                    var windowToScrolltextRatio = Math.round($(window).width() / container.find('.scrolling-text2').outerWidth()),-->
+<!--                        scrollTextContent = container.find('.scrolling-text2 .scrolling-text2-content2').text(),-->
+<!--                        newScrollText = '';-->
+<!--                    for (var i = 0; i < windowToScrolltextRatio; i++) {if (window.CP.shouldStopExecution(0)) break;-->
+<!--                        newScrollText += ' ' + scrollTextContent;-->
+<!--                    }window.CP.exitedLoop(0);-->
+<!--                    container.find('.scrolling-text2 .scrolling-text2-content2').text(newScrollText);-->
+<!--                }-->
+
+<!--                // Init variables and config-->
+<!--                var scrollingText = container.find('.scrolling-text2'),-->
+<!--                    scrollingTextWidth = scrollingText.outerWidth(),-->
+<!--                    scrollingTextHeight = scrollingText.outerHeight(true),-->
+<!--                    startLetterIndent = parseInt(scrollingText.find('.scrolling-text2-content2').css('font-size'), 10) / 4.8,-->
+<!--                    startLetterIndent = Math.round(startLetterIndent),-->
+<!--                    scrollAmountBoundary = Math.abs($(window).width() - scrollingTextWidth),-->
+<!--                    transformAmount = 0,-->
+<!--                    leftBound = 0,-->
+<!--                    rightBound = scrollAmountBoundary,-->
+<!--                    transformDirection = container.hasClass('left-to-right') ? -1 : 1,-->
+<!--                    transformSpeed = 100;-->
+
+
+
+
+
+<!--                // Read transform speed-->
+<!--                if (container.attr('speed')) {-->
+<!--                    transformSpeed = container.attr('speed');-->
+<!--                }-->
+
+<!--                // Make scrolling text copy for scrolling infinity-->
+<!--                container.append(scrollingText.clone().addClass('scrolling-text2-copy'));-->
+<!--                container.find('.scrolling-text2').css({ 'position': 'absolute', 'left': 0 });-->
+<!--                container.css('height', scrollingTextHeight);-->
+
+<!--                var getActiveScrollingText = function (direction) {-->
+<!--                    var firstScrollingText = container.find('.scrolling-text2:nth-child(1)');-->
+<!--                    var secondScrollingText = container.find('.scrolling-text2:nth-child(2)');-->
+
+<!--                    var firstScrollingTextLeft = parseInt(container.find('.scrolling-text2:nth-child(1)').css("left"), 10);-->
+<!--                    var secondScrollingTextLeft = parseInt(container.find('.scrolling-text2:nth-child(2)').css("left"), 10);-->
+
+<!--                    if (direction === 'left') {-->
+<!--                        return firstScrollingTextLeft < secondScrollingTextLeft ? secondScrollingText : firstScrollingText;-->
+<!--                    } else if (direction === 'right') {-->
+<!--                        return firstScrollingTextLeft > secondScrollingTextLeft ? secondScrollingText : firstScrollingText;-->
+<!--                    }-->
+<!--                };-->
+
+
+
+
+<!--                $(window).on('wheel', function (e) {-->
+<!--                    var delta = e.originalEvent.deltaY;-->
+
+<!--                    if (delta > 0) {-->
+<!--                        // going down-->
+<!--                        transformAmount += transformSpeed * transformDirection;-->
+<!--                        container.find('.scrolling-text2 .scrolling-text2-content2').css('transform', 'skewX(10deg)');-->
+<!--                    } else-->
+<!--                    {-->
+<!--                        transformAmount -= transformSpeed * transformDirection;-->
+<!--                        container.find('.scrolling-text2 .scrolling-text2-content').css('transform', 'skewX(-10deg)');-->
+<!--                    }-->
+<!--                    setTimeout(function () {-->
+<!--                        container.find('.scrolling-text2').css('transform', 'translate3d(' + transformAmount * -1 + 'px, 0, 0)');-->
+<!--                    }, 10);-->
+<!--                    setTimeout(function () {-->
+<!--                        container.find('.scrolling-text2 .scrolling-text2-content2').css('transform', 'skewX(0)');-->
+<!--                    }, 500);-->
+
+
+
+
+
+<!--                    // Boundaries-->
+<!--                    if (transformAmount < leftBound) {-->
+<!--                        var activeText = getActiveScrollingText('left');-->
+<!--                        activeText.css({ 'left': Math.round(leftBound - scrollingTextWidth - startLetterIndent) + 'px' });-->
+<!--                        leftBound = parseInt(activeText.css("left"), 10);-->
+<!--                        rightBound = leftBound + scrollingTextWidth + scrollAmountBoundary + startLetterIndent;-->
+
+<!--                    } else if (transformAmount > rightBound) {-->
+<!--                        var activeText = getActiveScrollingText('right');-->
+<!--                        activeText.css({ 'left': Math.round(rightBound + scrollingTextWidth - scrollAmountBoundary + startLetterIndent) + 'px' });-->
+<!--                        rightBound += scrollingTextWidth + startLetterIndent;-->
+<!--                        leftBound = rightBound - scrollingTextWidth - scrollAmountBoundary - startLetterIndent;-->
+<!--                    }-->
+<!--                });-->
+<!--            });-->
+<!--        }-->
+<!--    });-->
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+<footer>
+    <p>Helo</p>
+
+</footer>
 
 
 
