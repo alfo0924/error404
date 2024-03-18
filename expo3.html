@@ -485,7 +485,7 @@
 
 
 
-<div class="cc5"  >  </div>
+<div  @click="openLink"  class="cc5"  >  </div>
 
 
 
@@ -544,6 +544,23 @@
 
 
 
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    // Get the reference to the div element with class "cc5"
+    const divElement = document.querySelector(".cc5");
+
+    // Attach a click event listener to the div
+    divElement.addEventListener("click", function() {
+        // Define the URL to navigate to
+        const link = "https://www.youtube.com/watch?v=f0BzD1zCye0";
+
+        // // Open a new window with the specified link
+        window.open(link, "_blank");
+    });
+
+
+</script>
 
 
 <script>
