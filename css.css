@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    height: 1200px;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+
+
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+    text-decoration: none;
+    list-style-type: none
+
+}
+
+.container {
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
+
+    position: absolute;
+    /*width: 100vw;*/
+    overflow: hidden;
+    /*background-color: #000000;*/
+
+
+}
+
+
+
+.container .box {
+
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(
+            45deg,
+            #007205 10%,
+            transparent 10%,
+            transparent 50%,
+            #007205 50%,
+            #007205 60%,
+            transparent 60%,
+            transparent 100%
+    );
+
+    background-size: 33px 33px;
+    transform: rotate(calc(var(--i) * 90deg));
+    animation: animate 55.5s linear infinite;
+    /*animation-iteration-count: infinite;*/
+    /*animation-delay: 2s;*/
+
+
+}
+
+
+
+
+
+.cc5
+{
+    position: absolute;
+    background: url("https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg")no-repeat ;
+    background-color: rgba(0, 162, 0, 0.5);
+    /*background-size: 50%;*/
+
+    background-blend-mode: multiply;
+    align-content: center;
+    align-items: center;
+
+    opacity: 0.5;
+    width: 736px;
+    height: 736px;
+    top: 50%;
+    cursor: grab;
+
+
+}
+
+
+
+@keyframes animate {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .box {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container .box {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+
+
+.trns-text
+{
+    background: url(https://media.giphy.com/media/V4NSR1NG2p0KeJJyr5/giphy.gif)   -20px -20px no-repeat;
+    background-size: 10%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    /* Below is not needed */
+    display:inline-block;
+    flex-direction: row;
+    position: absolute;
+    font-size: 10rem;
+    text-shadow: 2px 5px rgba(0, 105, 0, 0.5);
+
+
+    font-family: "Rubik Broken Fax", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    letter-spacing: 2px;
+    top:20% ;
+    /*right: 50%;*/
+    /*background-size: 10%;*/
+    background-repeat: repeat;
+
+    cursor: grab;
+
+
+
+
+}
+#counter
+{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    color: #00ef0f;
+    align-content: center;
+    text-align: center;
+    font-size: 30px;
+
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.container {*/
+/*    position: relative;*/
+/*    width: 100vw;*/
+/*    overflow: hidden;*/
+/*    background-color: #000000;*/
+/*}*/
+
+.scrolling-text
+{
+    /* display: inline-block; */
+    background: rgba(14, 14, 14, 0);
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    will-change: transform;
+
+    backface-visibility: hidden;
+    /*padding: 20px ;*/
+    /*top:3%;*/
+
+}
+
+.scrolling-text .scrolling-text-content {
+    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHhteG9oOGViYWVkNXhjZXBxMHMwcDd3bGx6b25ma2QyOHB1bmFqZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3osxYsSSxjWhZw0BUY/giphy.gif);
+    background-size: 5%;
+    /* background-color: rgb(38, 72, 0);
+    background-blend-mode:darken; */
+
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 80px;
+    white-space: nowrap;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    line-height: 1em;
+    margin: 50px 0;
+
+    font-family: "Libre Barcode 39 Text", system-ui;
+    font-weight: 500;
+    font-style: normal;
+
+    cursor: grab;
+
+
+
+}
+section
+{
+    color: aliceblue;
+
+}
+
+
+.scrolling-text2 {
+    /* display: inline-block; */
+    background: rgb(0, 0, 0);
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    will-change: transform;
+    padding: 20px;
+    backface-visibility: hidden;
+}
+
+.scrolling-text2 .scrolling-text2-content2 {
+    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHI5OG9teW0zdGpkbWtza2NqMjM0a3YzaGFsamJ0YTUxaXB1andtdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/quEsMOrr3hmQ8/giphy.gif);
+    background-size: 5%;
+
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 100px;
+    white-space: nowrap;
+    transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+    line-height: 1em;
+    margin: 50px 0;
+
+
+
+    font-family: "Rubik Broken Fax", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer
+{
+    background: rgba(14, 14, 14, 0.89);
+    padding: 30px;
+    /*position: absolute;*/
+    color:chartreuse;
+    bottom:0;
+    width: 100%;
+    position: sticky;
+    top: 100vh;
+    /*flex-direction: column;*/
+
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+
+
+
+
