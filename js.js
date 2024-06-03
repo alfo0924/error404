@@ -1,15 +1,25 @@
 //dark-mode
 function lm() {
     var element = document.body;
-    var navbar = document.querySelector('.navbar');
+    var lightmodenavbar=document.getElementById('lightmodenavbar');
+    var darkmodenavbar=document.getElementById('darkmodenavbar');
+    var navbar = document.getElementById('navbar');
     element.classList.toggle("light-mode");
+    navbar.classList.toggle("navbar-light");
 
-
+    if (darkmodenavbar.style.display==="none")
+    {
+        lightmodenavbar.style.display="block";
+        darkmodenavbar.style.display="none";
+    }
+    else
+    {
+        lightmodenavbar.style.display="none";
+        darkmodenavbar.style.display="block";
+    }
 
 
 }
-
-
 
 
 
