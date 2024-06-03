@@ -1,7 +1,12 @@
 //dark-mode
 function lm() {
     var element = document.body;
+    var navbar = document.querySelector('.navbar');
     element.classList.toggle("light-mode");
+
+
+
+
 }
 
 
