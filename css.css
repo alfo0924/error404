@@ -11,15 +11,12 @@ body {
     justify-content: center;
     align-items: center;
     background: #000;
-
-
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
-
-
     text-decoration: none;
-    list-style-type: none
+    list-style-type: none;
+
 
 }
 
@@ -28,21 +25,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     -webkit-box-reflect: below 2px linear-gradient(transparent, #0005);
-
     position: absolute;
     /*width: 100vw;*/
-    overflow: hidden;
+    overflow:hidden;
     /*background-color: #000000;*/
-
-
 }
 
-
-
 .container .box {
-
     position: relative;
     width: 350px;
     height: 350px;
@@ -56,19 +47,12 @@ body {
             transparent 60%,
             transparent 100%
     );
-
     background-size: 33px 33px;
     transform: rotate(calc(var(--i) * 90deg));
     animation: animate 55.5s linear infinite;
     /*animation-iteration-count: infinite;*/
     /*animation-delay: 2s;*/
-
-
 }
-
-
-
-
 
 .cc5
 {
@@ -77,7 +61,7 @@ body {
     background-color: rgba(0, 162, 0, 0.5);
     /*background-size: 50%;*/
 
-    background-blend-mode: multiply;
+    /*background-blend-mode: multiply;*/
     align-content: center;
     align-items: center;
 
@@ -86,8 +70,6 @@ body {
     height: 736px;
     top: 50%;
     cursor: grab;
-
-
 }
 
 
@@ -149,9 +131,6 @@ body {
 
     cursor: grab;
 
-
-
-
 }
 #counter
 {
@@ -168,28 +147,6 @@ body {
     font-style: normal;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.container {*/
-/*    position: relative;*/
-/*    width: 100vw;*/
-/*    overflow: hidden;*/
-/*    background-color: #000000;*/
-/*}*/
-
 .scrolling-text
 {
     /* display: inline-block; */
@@ -224,10 +181,7 @@ body {
     font-family: "Libre Barcode 39 Text", system-ui;
     font-weight: 500;
     font-style: normal;
-
     cursor: grab;
-
-
 
 }
 section
@@ -242,7 +196,7 @@ section
     background: rgb(0, 0, 0);
     transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
     will-change: transform;
-    padding: 20px;
+    /*padding: 20px;*/
     backface-visibility: hidden;
 }
 
@@ -262,25 +216,10 @@ section
     line-height: 1em;
     margin: 50px 0;
 
-
-
     font-family: "Rubik Broken Fax", system-ui;
     font-weight: 400;
     font-style: normal;
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
 footer
 {
@@ -298,8 +237,35 @@ footer
     list-style-type: none;
 }
 
+.light-mode
+{
+    background: rgb(236, 236, 236);
+    color:rgba(17,17,17);
 
 
+}
+.light-mode footer
+{
+    background: #b9b9b9;
+    color: rgb(0, 187, 15);
 
+}
 
+.light-mode .cc5
+{
+    background:rgba(153,153,153);
+    display: none;
+}
+ .box12 .light-mode
+{
+    display: none;
+}
+.box12 .light-mode
+{
+    display: none;
+}
+.light-mode .nvabar12112
+{
+    background: white;
+}
 

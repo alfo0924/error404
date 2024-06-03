@@ -1,3 +1,13 @@
+//dark-mode
+function lm() {
+    var element = document.body;
+    element.classList.toggle("light-mode");
+}
+
+
+
+
+
 
 // Get the reference to the div element with class "cc5"
 const divElement = document.querySelector(".cc5");
