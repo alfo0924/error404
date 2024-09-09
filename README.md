@@ -62,5 +62,19 @@
 ## 授權
 此專案採用 MIT 許可證。更多詳情請參見 [LICENSE](LICENSE) 檔案。
 
+ <hr style="border-color: #00c000">
+        <h1 style="font-size: xx-large ; color: rgba(10,236,16,0.92) ; text-shadow: 2px 3px 5px ">原始SourceCode碼</h1>
+        <br>
+        <a href="https://alfo0924.github.io/error404/"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  >GitHub Erro404 作品頁面  </a>
+        <br>
+        <br>
+        <a href="https://github.com/alfo0924/error404"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  >GitHub Erro404 Sourcecode 原始碼 </a>
+        <br>
+        <br>
+        <a href="https://delightful-sand-03dc2631e.5.azurestaticapps.net/"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  > Error404Description作品說明頁面 </a>
+        <br>
+        <br>
+        <a href="https://github.com/alfo0924/Error404Description/"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  > Error404DescriptionSourcecode說明頁面原始碼 </a>
+        <br>
 
- <a href="https://alfo0924.github.io/Error404Description/"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  > 作品說明頁面 </a>
+
