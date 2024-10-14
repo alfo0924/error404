@@ -2,6 +2,7 @@
 
 ## 介紹
 此專案靈感來自電影 **「駭客任務 The Matrix」**，其中的機器語言以 **綠色代碼** 形式呈現。設計結合了 GitHub 進行版本控制和源代碼管理，透過 **網頁技術** 解決 **404 錯誤** 問題，並採用了 **扁平化設計**。頁面中包含 **互動式動畫** 及 **彩蛋**，以提高用戶參與感，並且加入 **自動導向功能**，防止使用者在錯誤頁面上等待過久。
+        <a href="https://alfo0924.github.io/error404/"  style="text-decoration: none ; list-style-type: none  ; color:rgba(3,206,7,0.92); "  >GitHub Erro404 作品頁面  </a>
 
 ## 功能
 
